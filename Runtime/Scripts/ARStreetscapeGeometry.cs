@@ -135,7 +135,7 @@ namespace Google.XR.ARCoreExtensions
         /// <summary>
         /// Gets the <c>TrackingState</c> associated with this geometry.
         /// </summary>
-        public TrackingState trackingState
+        public virtual TrackingState trackingState
         {
             get
             {
