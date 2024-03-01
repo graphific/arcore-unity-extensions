@@ -17,6 +17,7 @@
 //
 // </copyright>
 //-----------------------------------------------------------------------
+// adapted from https://github.com/asus4/arcore-unity-extensions
 
 namespace Google.XR.ARCoreExtensions
 {
@@ -60,7 +61,7 @@ namespace Google.XR.ARCoreExtensions
         /// <summary>
         /// Unity's Update() method.
         /// </summary>
-        public void Update()
+        public virtual void Update()
         {
             if (ARCoreExtensions._instance.currentARCoreSessionHandle == IntPtr.Zero)
             {

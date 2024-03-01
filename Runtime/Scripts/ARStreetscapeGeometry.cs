@@ -17,6 +17,7 @@
 //
 // </copyright>
 //-----------------------------------------------------------------------
+// adapted from https://github.com/asus4/arcore-unity-extensions
 
 namespace Google.XR.ARCoreExtensions
 {
@@ -45,7 +46,7 @@ namespace Google.XR.ARCoreExtensions
         /// Sets the ARStreetscapeGeometry Handle.
         /// </summary>
         /// <param name="streetscapeGeometryHandle">The native facade object handle.</param>
-        internal ARStreetscapeGeometry(IntPtr streetscapeGeometryHandle)
+        public ARStreetscapeGeometry(IntPtr streetscapeGeometryHandle)
         {
             _streetscapeGeometryHandle = streetscapeGeometryHandle;
         }
@@ -53,7 +54,7 @@ namespace Google.XR.ARCoreExtensions
         /// <summary>
         /// Gets the <c>TrackableId</c> associated with this geometry.
         /// </summary>
-        public TrackableId trackableId
+        public virtual TrackableId trackableId
         {
             get
             {
@@ -64,7 +65,7 @@ namespace Google.XR.ARCoreExtensions
         /// <summary>
         /// Gets the <c>Pose</c> associated with this geometry.
         /// </summary>
-        public Pose pose
+        public virtual Pose pose
         {
             get
             {
@@ -89,7 +90,7 @@ namespace Google.XR.ARCoreExtensions
         /// <summary>
         /// Gets the <c>StreetscapeGeometryType</c> corrosponding to this geometry.
         /// </summary>
-        public StreetscapeGeometryType streetscapeGeometryType
+        public virtual StreetscapeGeometryType streetscapeGeometryType
         {
             get
             {
@@ -106,7 +107,7 @@ namespace Google.XR.ARCoreExtensions
         /// <c><a
         /// href="https://docs.unity3d.com/ScriptReference/Mesh.RecalculateNormals.html">Mesh.RecalculateNormals()</a></c>.
         /// </summary>
-        public Mesh mesh
+        public virtual Mesh mesh
         {
             get
             {
@@ -147,7 +148,7 @@ namespace Google.XR.ARCoreExtensions
         /// <summary>
         /// Gets the <c>StreetscapeGeometryQuality</c> associated with this geometry.
         /// </summary>
-        public StreetscapeGeometryQuality quality
+        public virtual StreetscapeGeometryQuality quality
         {
             get
             {
